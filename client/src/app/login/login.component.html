@@ -1,0 +1,14 @@
+<h2>Welcome - Login Here</h2>
+<div>
+  <label>
+    <input [(ngModel)]="user.userName" placeholder="Username" />
+  </label>
+  <br />
+  <label>
+    <input [(ngModel)]="user.password" placeholder="Password" />
+  </label>
+  <br />
+  <button (click)="login()">Login</button>
+</div>
+
+<h3>First time user? Register <a [routerLink]="['/register']">HERE</a></h3>
