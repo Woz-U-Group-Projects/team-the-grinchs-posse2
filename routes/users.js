@@ -50,9 +50,10 @@ router.post("/signup", function(req, res, next) {
           .then(createdUser => {
             const userId = createdUser.userId;
             console.log(userId);
-            const token = auth.signUser(createdUser);
+            const token = authService.signUser(createdUser);
             res.cookie("jwt", token);
-            res.redirect("profile/" + userId);
+            //res.redirect("profile/" + userId);
+            res.json("registered");
           });
       }
     });
