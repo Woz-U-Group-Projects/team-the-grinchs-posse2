@@ -13,7 +13,9 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link nav-item" routerLink="/">Home</a>
+      <a class="nav-link nav-item"
+      *ngIf="userService.loggedIn"
+      routerLink="/">Home</a>
       <a
         *ngIf="!userService.loggedIn"
         class="nav-item nav-link"
