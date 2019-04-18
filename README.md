@@ -2,4 +2,4 @@
 
 ## Team: The Grinch's Posse
 
-### Project Working Name: Gift Wish List
+### Project Name: Gift Wish List
