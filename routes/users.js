@@ -4,6 +4,27 @@ var router = express.Router();
 var models = require("../models"); //<--- Add models
 var authService = require("../services/auth"); //<--- Add authentication service
 
+router.get("/users", function(req, res, next) {
+  let token = req.cookies.jwt;
+  // if we have a cookie we can proceed
+  if (token) {
+    // validate the cookie
+    authService.verifyUser(token).then(user => {
+      if (user) {
+        models.users.findAll().then(users =>res.send(JSON.stringify(users)) );
+        
+      } else {
+        res.status(401);
+        res.json("Invalid authentication token");
+      }
+    });
+  } else {
+    // no jwt cookie, assume user is not logged in
+    res.status(401);
+    res.json("Must be logged in");
+  }
+});
+
 router.get("/profile", function(req, res, next) {
   let token = req.cookies.jwt;
   // if we have a cookie we can proceed

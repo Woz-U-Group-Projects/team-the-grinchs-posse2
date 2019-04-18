@@ -42,4 +42,8 @@ export class UserService {
   validateToken(): Observable<boolean> {
     return this.http.get<boolean>(this.url + "validateToken", this.options);
   }
+
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(this.url + "users", this.options);
+  }
 }

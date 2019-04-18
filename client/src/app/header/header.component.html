@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Authentication</a>
+  <a class="navbar-brand" href="#">Gift Wish List App</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -13,7 +13,9 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link nav-item" routerLink="/">Home</a>
+      <a class="nav-link nav-item"
+      *ngIf="userService.loggedIn"
+      routerLink="/">Home</a>
       <a
         *ngIf="!userService.loggedIn"
         class="nav-item nav-link"
