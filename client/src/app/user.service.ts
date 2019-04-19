@@ -9,7 +9,7 @@ import { Observable } from "rxjs";
 export class UserService {
   constructor(private http: HttpClient) {}
 
-  // options allows us to flag that we are using crednetials, which will allow the jwt cookie on all requests
+  // options allows us to flag that we are using credentials, which will allow the jwt cookie on all requests
   options = { withCredentials: true };
 
   // base url of the express back end
