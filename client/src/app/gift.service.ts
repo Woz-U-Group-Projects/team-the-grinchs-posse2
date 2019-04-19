@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { User } from './user';
+import { Gift } from './gift';
+
 @Injectable({
   providedIn: 'root'
 })
 export class GiftService {
 
-  constructor(public http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 }
