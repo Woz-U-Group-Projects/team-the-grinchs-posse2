@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: "register", component: RegisterComponent },
   { path: "login", component: LoginComponent },
   { path: "profile", component: ProfileComponent },
-  { path: "home", component: HomeComponent }
+  { path: "home", component: HomeComponent },
+// { path: "gifts/:id", } ????? Do we need to create a GiftsComponent to go here? I was trying to avoid that.
 ];
 
 @NgModule({
