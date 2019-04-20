@@ -10,9 +10,15 @@ import { Gift } from '../gift';
 })
 export class GiftComponent implements OnInit {
 
-  constructor() { }
+  gifts: Gift[] = [];
+
+  constructor(private giftService: GiftService) { }
 
   ngOnInit() {
+    this.giftService.getGifts().subscribe(gift => {
+      console.log(gift);
+      this.gifts = gift;
+    });
   }
 
 }
