@@ -19,6 +19,6 @@ export class GiftService {
   url: string = "http://localhost:3000/users/";
 
   getGifts(): Observable<Gift[]> {
-    return this.http.get<Gift[]>(this.url + "gifts/:id", this.options);
+    return this.http.get<Gift[]>(this.url + "/giftList/:id/gifts/", this.options);
   }
 }
