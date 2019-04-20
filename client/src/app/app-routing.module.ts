@@ -6,6 +6,7 @@ import { RegisterComponent } from "./register/register.component";
 import { HomeComponent } from "./home/home.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { GiftComponent } from './gift/gift.component';
+import { GiftListComponent } from './gift-list/gift-list.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "profile", component: ProfileComponent },
   { path: "home", component: HomeComponent },
-  { path: "gifts/:id", component: GiftComponent }
+  { path: "giftList/:id/gifts", component: GiftComponent },
+  { path: "giftList/:id", component: GiftListComponent }
 ];
 
 @NgModule({
