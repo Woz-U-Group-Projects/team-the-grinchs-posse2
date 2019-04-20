@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { User } from './user';
 import { Gift } from './gift';
+import { GiftList } from './giftList';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GiftService {
+export class GiftListService {
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class GiftService {
   // base url of the express back end
   url: string = "http://localhost:3000/users/";
 
-  getGifts(): Observable<Gift[]> {
-    return this.http.get<Gift[]>(this.url + "/giftList/:id/gifts/", this.options);
+  getGiftLists(): Observable<GiftList[]> {
+    return this.http.get<GiftList[]>(this.url + "giftList/:id", this.options);
   }
 }

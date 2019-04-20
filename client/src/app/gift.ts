@@ -1,7 +1,7 @@
 export class Gift {
+    giftId: number;
+    giftName: string;
     listId: number;
-    listTitle: string;
-    listOwner: string;
-    userUserId: string;
+    listOwner: number;
   }
   

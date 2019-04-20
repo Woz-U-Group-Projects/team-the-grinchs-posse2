@@ -10,6 +10,7 @@ import { LoginComponent } from "./login/login.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { RegisterComponent } from "./register/register.component";
 import { GiftComponent } from './gift/gift.component';
+import { GiftListComponent } from './gift-list/gift-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GiftComponent } from './gift/gift.component';
     LoginComponent,
     ProfileComponent,
     RegisterComponent,
-    GiftComponent
+    GiftComponent,
+    GiftListComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
