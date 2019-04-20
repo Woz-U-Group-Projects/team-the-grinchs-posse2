@@ -1,0 +1,22 @@
+/* Private styling for header.component.html  */
+
+/* Typeface for header navigation text: */
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,500i,700,700i');
+
+header  {
+  font-family: 'Alegreya Sans', 'MS Trebuchet', sans-serif;
+}
+
+header a  {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  word-spacing: 2px;
+  padding-left: 35px;
+  color: #fffafa;   /* Snow */
+}
+
+.header-background  {
+  background-color: #934a5f;
+}
