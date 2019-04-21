@@ -1,8 +1,12 @@
-<!-- BOBBY'S CODE -->
+<!-- BOBBY'S and JESSE'S CODE -->
 <div *ngIf="userService.loggedIn">
   <h3>Family Member List</h3>
-  <ul>
-    <li *ngFor="let user of users">{{ user.firstName }} {{ user.lastName }}</li>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-light list-group-item-action" *ngFor="let user of users">
+      <a routerLink="#">
+        <span class="badge badge-primary badge-pill">{{ user.userId }}</span> {{ user.firstName }} {{ user.lastName }}
+      </a>
+    </li>
   </ul>
 </div>
 <div *ngIf="!userService.loggedIn">

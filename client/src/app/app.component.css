@@ -1,6 +1,6 @@
-/* BOBBY'S CSS */
 .jumbotron  {
     background-color: #57648c;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+    border-radius: 0;
 }
