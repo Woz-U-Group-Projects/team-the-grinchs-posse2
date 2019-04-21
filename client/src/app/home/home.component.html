@@ -1,3 +1,16 @@
+<!-- BOBBY'S CODE -->
+<div *ngIf="userService.loggedIn">
+  <h3>Family Member List</h3>
+  <ul>
+    <li *ngFor="let user of users">{{ user.firstName }} {{ user.lastName }}</li>
+  </ul>
+</div>
+<div *ngIf="!userService.loggedIn">
+  <h1>Welcome</h1>
+  <p>You must be logged in to view this content.</p>
+</div>
+
+<!-- JESSE'S CODE:
 <div *ngIf="userService.loggedIn">
   <h3>Family Member List</h3>
   <ul>
@@ -8,3 +21,4 @@
   <h4>Welcome</h4>
   <p>You must be logged in to view this content.</p>
 </div>
+-->
