@@ -137,4 +137,164 @@ router.get("/validateToken", function(req, res, next) {
   }
 });
 
+/** JANE'S NEW CODE FOR GIFTS AND GIFTLISTS:
+
+router.get('/giftlists', function(req, res, next) {
+  models.giftlists.findAll({}).then(giftlistsAsPlainObject => {
+    const mappedgiftlists = giftlistsAsPlainObject.map(giftlist => ({
+      listId: giftlists.listId,
+      listName: list.Name
+    }));
+    res.send(JSON.stringify(mappedGiftlists));
+  });
+});
+
+
+
+router.get('/gifts', function(req, res, next) {
+  models.gifts.findAll({}).then(giftsFound => {
+    res.render('gifts', {
+      gifts: giftsFound
+    });
+  });
+});
+
+router.post('/gifts', (req, res) => {
+  models.gifts
+    .findOrCreate({
+      where: {
+        giftID: req.body.giftID,
+        giftName: req.body.giftName,
+        description: req.body.description
+      }
+    })
+    .spread(function(result, created) {
+      if (created) {
+        res.redirect('/artists');
+      } else {
+        res.send('This artist already exists!');
+      }
+    });
+});
+
+router.get('/gifts/:id', (req, res) => {
+  let giftId = parseInt(req.params.id);
+  models.albums
+    .find({
+      where: {
+        giftId: giftId
+      },
+      include: [models.gifts]
+    })
+    .then(album => {
+      res.render('specificGift', {
+        giftName: gift.Name,
+        GiftId: gift.GiftId
+      });
+    });
+});
+
+router.put('/gifts/:id', (req, res) => {
+  let giftId = parseInt(req.params.id);
+  models.gifts
+    .update(
+      {
+        giftName: req.body.name
+       
+      },
+      {
+        where: {
+          GiftId: giftId
+        }
+      }
+    )
+    .then(result => {
+      res.send();
+    });
+});
+
+router.delete('/gifts/:id/delete', (req, res) => {
+  let giftsId = parseInt(req.params.id);
+  models.tracks
+    .update(
+      {
+        Deleted: 'true'
+      },
+      {
+        where: {
+          GiftsId: giftsId
+        }
+      }
+    )
+    .then(track => {
+      models.gifts
+        .update(
+          {
+            Deleted: 'true'
+          },
+          {
+            where: {
+              GiftsId: giftsId
+            }
+          }
+        )
+        .then(album => {
+          res.redirect('/gifts');
+        });
+    });
+});
+
+router.post('/giftlists', (req, res) => {
+  models.giftlists
+    .findOrCreate({
+      where: {
+        userName: req.body.users
+      }
+    })
+    .spread(function (result, created) {
+      models.giftlists
+        .findOrCreate({
+          where: {
+            listTitle: req.body.listtitle,
+            listId: result.listId,
+
+          }
+        })
+        .spread(function (result, created) {
+          if (created) {
+            res.redirect('/gifts');
+          } else {
+            res.send('This gift already exists!');
+          }
+        });
+    });
+});
+
+router.put('/giftLists/:id', (req, res) => {
+  let listId = parseInt(req.params.id);
+  models.giftlists
+    .update(
+      {
+        Id: req.body.title,
+        listTitle: req.body.yearReleased
+      },
+      {
+        where: {
+          ListID: listId
+        }
+      }
+    )
+    .then(result => {
+      res.send();
+    });
+});
+
+// This logout get method is different than the one above that is not commented out:
+
+router.get('/logout', function (req, res) {
+  res.cookie('jwt', null);
+  res.redirect('users/login');
+});
+ */
+
 module.exports = router;

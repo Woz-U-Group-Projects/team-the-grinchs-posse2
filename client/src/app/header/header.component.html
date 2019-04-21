@@ -1,3 +1,44 @@
+<!-- BOBBY'S CODE: -->
+<header class="header-background">
+
+  <nav>
+
+    <a class="brand" href="./">Gift Wish List App |</a>
+
+    <a *ngIf="userService.loggedIn"
+     class="navLink" id="home"
+     routerLink="/">Home
+    </a>
+
+    <a class="navLink" id="logIn"
+    *ngIf="!userService.loggedIn"
+    routerLink="/login"
+    >Login
+    </a>
+
+    <a class="navLink" id="profile"
+     *ngIf="userService.loggedIn"
+     routerLink="/profile"
+    >Profile
+    </a>
+
+    <a class="navLink" id="logOut"
+     *ngIf="userService.loggedIn"
+     (click)="logout()"
+     >Logout
+    </a>
+
+    <a class="navLink" id="register"
+     *ngIf="!userService.loggedIn"
+     routerLink="/register"
+    >Register
+    </a>
+
+  </nav>
+
+</header>
+
+<!-- ORIGINAL CODE:
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Gift Wish List App</a>
   <button
@@ -44,3 +85,4 @@
     </div>
   </div>
 </nav>
+-->
