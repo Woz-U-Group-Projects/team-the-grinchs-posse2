@@ -8,15 +8,53 @@ header  {
   font-family: 'Alegreya Sans', 'MS Trebuchet', sans-serif;
 }
 
-header a  {
+.brand  {
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 1.5px;
   word-spacing: 2px;
   padding-left: 35px;
   color: #fffafa;   /* Snow */
+  text-decoration: none;
 }
 
 .header-background  {
   background-color: #934a5f;
+}
+
+header nav a  {
+  display: inline-block;
+  color: #f5f5f5;   /* White Smoke */
+}
+
+.navLink  {
+  font-family: 'Alegreya Sans', 'MS Trebuchet', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #f5f5f5;   /* White Smoke */
+  margin-right: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navLink:hover  {
+  color: #934a5f !important;
+  background-color: #f5f5f5;  /* White Smoke */
+  padding: 1px 12px;
+  border-radius: 10px;
+  transition: all ease-in-out 0.75s;
+}
+
+.navLink:active  {
+  font-weight:  700;
+}
+
+.navLink#logIn,
+.navLink#home  {
+  margin-left: 15px;
+}
+
+.navLink#logOut,
+.navLink#register  {
+  margin-right: 0;
 }
