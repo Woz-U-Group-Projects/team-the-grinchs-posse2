@@ -2,6 +2,13 @@
 
 /* Typeface for header navigation text: */
 
+/* NOTE: All styling for this app has been adapted from the color scheme
+   found at the following address:
+
+   https://www.shutterstock.com/blog/10-gorgeous-color-schemes-for-websites?kw=&gclid=Cj0KCQjwhuvlBRCeARIsAM720HqsEDVV95kYL-IwrpDKqMGJK3GZ67W65QTk8Mc3fIkVLPG-HDqNtLIaAoP9EALw_wcB&gclsrc=aw.ds
+
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,500i,700,700i');
 
 header  {
