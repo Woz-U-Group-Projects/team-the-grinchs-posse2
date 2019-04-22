@@ -27,6 +27,8 @@ a:hover {
   text-decoration: none;
 }
 
-ul {
-  width: 25%;
+@media only screen and (min-width: 992px) {
+  ul {
+    width: 25%;
+  }
 }
