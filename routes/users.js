@@ -170,9 +170,9 @@ router.post('/gifts', (req, res) => {
     })
     .spread(function(result, created) {
       if (created) {
-        res.redirect('/artists');
+        res.redirect('/gifts');
       } else {
-        res.send('This artist already exists!');
+        res.send('This gift already exists!');
       }
     });
 });
@@ -289,12 +289,6 @@ router.put('/giftLists/:id', (req, res) => {
     });
 });
 
-// This logout get method is different than the one above that is not commented out:
-
-router.get('/logout', function (req, res) {
-  res.cookie('jwt', null);
-  res.redirect('users/login');
-});
  */
 
 module.exports = router;
