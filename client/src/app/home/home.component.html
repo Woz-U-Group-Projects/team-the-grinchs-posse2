@@ -1,6 +1,6 @@
 <!-- BOBBY'S and JESSE'S CODE -->
 <div *ngIf="userService.loggedIn">
-  <h3>User List</h3>
+  <h1>User List</h1>
   <ul class="list-group">
     <li class="list-group-item list-group-item-light list-group-item-action" *ngFor="let user of users">
       <a routerLink="#">
@@ -10,7 +10,7 @@
   </ul>
 </div>
 <div *ngIf="!userService.loggedIn">
-  <h1>Welcome</h1>
+  <h2>Welcome</h2>
   <p>You must be logged in to view this content.</p>
 </div>
 
