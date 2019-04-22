@@ -137,7 +137,7 @@ router.get("/validateToken", function(req, res, next) {
   }
 });
 
-/** JANE'S NEW CODE FOR GIFTS AND GIFTLISTS:
+/** JANE'S NEW CODE FOR GIFTS AND GIFTLISTS (This still needs a few edits):
 
 router.get('/giftlists', function(req, res, next) {
   models.giftlists.findAll({}).then(giftlistsAsPlainObject => {
