@@ -1,24 +1,55 @@
-<h3>{{ user.firstName }}'s Profile</h3>
+<h1>{{ user.firstName }}&apos;s Profile</h1>
 <hr>
 <label>
   <input type="text" placeholder="Create new wish list">
   <button type="submit">Submit</button>
 </label>
 <hr>
-<h4>Wish lists</h4>
+<h2>Wish lists</h2>
 <!-- Below are several hard-coded wish lists that are here to show overall visual presentation but will eventually come from the database. -->
 <ul class="list-group">
   <li class="list-group-item list-group-item-light list-group-item-action">
-    <a routerLink="#">Wish List 1</a>
+    <a routerLink="#">Samuel&apos;s Gift List</a>
   </li>
   <li class="list-group-item list-group-item-light list-group-item-action">
-    <a routerLink="#">Wish List 2</a>
+    <a routerLink="#">Gina&apos;s Gift List</a>
   </li>
   <li class="list-group-item list-group-item-light list-group-item-action">
-    <a routerLink="#">Wish List 3</a>
+    <a routerLink="#">Armand&apos;s Gift List</a>
   </li>
 </ul>
 <hr>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th colspan="2" class="tableTitle">user details</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th>User ID#:</th>
+        <td>{{ user.userId }}</td>
+      </tr>
+      <tr>
+        <th>First Name:</th>
+        <td>{{ user.firstName }}</td>
+      </tr>
+      <tr>
+        <th>Last Name:</th>
+        <td>{{ user.lastName }}</td>
+      </tr>
+      <tr>
+        <th>Username:</th>
+        <td>{{ user.userName }}</td>
+      </tr>
+    </tbody>
+
+  </table>  <!-- END user profile -->
+
+<!--
 <p>
   <em>User Details</em><br>
   First Name: {{ user.firstName }}<br />
@@ -26,3 +57,4 @@
   Username: {{ user.userName }}<br />
   Logged In: {{ userService.loggedIn }}
 </p>
+-->
